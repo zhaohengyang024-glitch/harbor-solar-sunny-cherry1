@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "予你",
+      "hasCanvas": false,
+      "bodyTextLen": 42,
+      "bodyTextHash": "c69c98807d38c20ebe6900cde2f8485d1f07b58e3454f3713dc06e0c199016e2",
+      "bodyTextPrefix": "FOR YOU 致 亲爱的 一份只写给你的生日礼物。轻轻揭开火漆就好。 予 打开信封",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "予你",
+      "hasCanvas": false,
+      "bodyTextLen": 42,
+      "bodyTextHash": "c69c98807d38c20ebe6900cde2f8485d1f07b58e3454f3713dc06e0c199016e2",
+      "bodyTextPrefix": "FOR YOU 致 亲爱的 一份只写给你的生日礼物。轻轻揭开火漆就好。 予 打开信封",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
