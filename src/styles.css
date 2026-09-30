@@ -311,13 +311,104 @@
   animation: caret 1s steps(1) infinite;
 }
 
+.fw-layer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.fw {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background: var(--color-primary);
+  box-shadow:
+    14px 0 0 0 var(--color-primary),
+    -14px 0 0 0 var(--color-paper),
+    0 14px 0 0 var(--color-fg),
+    0 -14px 0 0 var(--color-primary),
+    10px 10px 0 0 var(--color-paper),
+    -10px -10px 0 0 var(--color-primary),
+    10px -10px 0 0 var(--color-fg),
+    -10px 10px 0 0 var(--color-paper);
+  animation: fw-burst 2.8s ease-out infinite;
+}
+
+.fw-1 { left: 12%; animation-delay: 0s; }
+.fw-2 { left: 32%; animation-delay: 0.5s; }
+.fw-3 { left: 58%; animation-delay: 1s; }
+.fw-4 { left: 78%; animation-delay: 1.6s; }
+.fw:nth-child(4n + 1) { left: 18%; }
+.fw:nth-child(4n + 2) { left: 40%; animation-delay: 0.7s; }
+.fw:nth-child(4n + 3) { left: 63%; animation-delay: 1.2s; }
+.fw:nth-child(4n + 4) { left: 84%; animation-delay: 1.9s; }
+
+@keyframes fw-burst {
+  0% {
+    transform: translate3d(0, 72vh, 0) scale(0.2);
+    opacity: 0;
+  }
+  22% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(8px, 14vh, 0) scale(1.7);
+    opacity: 0;
+  }
+}
+
+.candle {
+  position: relative;
+  width: 14px;
+  height: 52px;
+  border-radius: 2px;
+  background: var(--color-paper);
+  box-shadow: var(--shadow-paper);
+}
+
+.candle::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  width: 10px;
+  height: 16px;
+  border-radius: 50% 50% 40% 40%;
+  background: var(--color-primary);
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: opacity 200ms ease-out;
+  animation: flicker 0.8s ease-in-out infinite;
+}
+
+.candle.is-out::before {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.12, 0.88);
+    opacity: 0.82;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rise-in,
   .dust-speck,
   .star-idle,
   .flip-inner,
   .wax-seal.is-pressing,
-  .caret {
+  .caret,
+  .fw,
+  .candle::before {
     animation: none !important;
     transition: none !important;
     filter: none !important;

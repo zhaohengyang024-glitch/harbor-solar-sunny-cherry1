@@ -11,7 +11,7 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      { name: "description", content: "一份只写给你的生日礼物。" },
+      { name: "description", content: "一份只属于你们的恋爱数字档案。" },
       { name: "theme-color", content: "#14110f" },
     ],
     links: [
@@ -29,6 +29,11 @@ export const Route = createRootRoute({
   }),
   component: () => (
     <html lang="zh-CN" className="antialiased" suppressHydrationWarning>
+      {/*
+        这里本来想写很多复杂的功能，
+        但后来发现，最重要的一句还是：
+        我喜欢你。
+      */}
       <head>
         <HeadContent />
       </head>

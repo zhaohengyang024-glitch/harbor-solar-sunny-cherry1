@@ -3,8 +3,10 @@ export type GiftConfig = {
   hisName: string;
   birthdayLabel: string;
   birthdayISO: string;
+  togetherSince: string;
   secretQuestion: string;
   secretAnswer: string;
+  hiddenKeyword: string;
   letter: string;
   promise: string;
 };
@@ -44,13 +46,15 @@ export const DEFAULT_CONFIG: GiftConfig = {
   hisName: "我",
   birthdayLabel: "今天",
   birthdayISO: "",
+  togetherSince: "2024-09-28",
   secretQuestion: "",
   secretAnswer: "",
+  hiddenKeyword: "yuni",
   letter: `{{her}}：
 
 我没有办法把一整年的喜欢，装进一个盒子里。
 所以我做了这个小小的地方——
-像一封可以走进去的信。
+像一封可以走进去的信，也像一份可以长期保存的档案。
 
 有些话当面说会不好意思，写下来，又觉得刚好。
 谢谢你还在。谢谢你让普通的日子变得值得被记住。

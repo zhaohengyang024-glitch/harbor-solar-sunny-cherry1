@@ -40,17 +40,17 @@ export function CustomizeDialog() {
           type="button"
           variant="ghost"
           size="icon"
-          className="fixed bottom-4 left-4 z-40 text-subtle opacity-50 hover:opacity-100"
-          aria-label="编辑这份礼物"
+          className="fixed top-4 left-4 z-40 text-subtle opacity-50 hover:opacity-100"
+          aria-label="编辑这份档案"
         >
           <PenLine className="size-4" />
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>编辑这份礼物</DialogTitle>
+          <DialogTitle>编辑这份档案</DialogTitle>
           <DialogDescription>
-            改成你们的名字、日期和真心话。保存后会留在这台设备上。
+            改成你们的名字、在一起的日子和真心话。保存后会留在这台设备上。
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-4">
@@ -68,6 +68,24 @@ export function CustomizeDialog() {
               maxLength={20}
             />
           </Field>
+          <Field label="在一起的那天">
+            <Input
+              type="date"
+              value={draft.togetherSince}
+              onChange={(e) =>
+                setDraft({ ...draft, togetherSince: e.target.value })
+              }
+            />
+          </Field>
+          <Field label="生日">
+            <Input
+              type="date"
+              value={draft.birthdayISO}
+              onChange={(e) =>
+                setDraft({ ...draft, birthdayISO: e.target.value })
+              }
+            />
+          </Field>
           <Field label="生日文案">
             <Input
               value={draft.birthdayLabel}
@@ -75,15 +93,6 @@ export function CustomizeDialog() {
                 setDraft({ ...draft, birthdayLabel: e.target.value })
               }
               placeholder="今天 / 十月一日"
-            />
-          </Field>
-          <Field label="解锁日期（可选，留空即刻可看）">
-            <Input
-              type="date"
-              value={draft.birthdayISO}
-              onChange={(e) =>
-                setDraft({ ...draft, birthdayISO: e.target.value })
-              }
             />
           </Field>
           <Field label="开场提问（可选）">
@@ -102,6 +111,18 @@ export function CustomizeDialog() {
                 setDraft({ ...draft, secretAnswer: e.target.value })
               }
             />
+          </Field>
+          <Field label="隐藏页口令">
+            <Input
+              value={draft.hiddenKeyword}
+              onChange={(e) =>
+                setDraft({ ...draft, hiddenKeyword: e.target.value })
+              }
+              placeholder="键盘输入后进入隐藏页"
+            />
+            <p className="mt-1 text-xs text-subtle">
+              在桌面连点「YUNI OS」五次，也可以打开。
+            </p>
           </Field>
           <Field label="信">
             <Textarea

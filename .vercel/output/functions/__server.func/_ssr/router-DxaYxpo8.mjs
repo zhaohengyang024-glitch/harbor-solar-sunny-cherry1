@@ -2,10 +2,10 @@ import { i as __toESM, n as __exportAll } from "../_runtime.mjs";
 import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
 import { _ as createFileRoute, d as Scripts, f as HeadContent, g as lazyRouteComponent, h as Outlet, m as createRouter, v as createRootRoute, y as useRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
-import { n as TriangleAlert } from "../_libs/lucide-react.mjs";
+import { r as TriangleAlert } from "../_libs/lucide-react.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-BeKkEJf8.js
-var router_BeKkEJf8_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-DxaYxpo8.js
+var router_DxaYxpo8_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var FALLBACK_MESSAGE = "An unexpected error occurred. Try reloading the page.";
@@ -299,7 +299,7 @@ function PreviewHostBridge() {
 	}, [router]);
 	return null;
 }
-var styles_default = "/assets/styles-C-8uoMwf.css";
+var styles_default = "/assets/styles-Dxbo0_b1.css";
 var APP_NAME = "予你";
 var Route$1 = createRootRoute({
 	head: () => ({
@@ -312,7 +312,7 @@ var Route$1 = createRootRoute({
 			{ title: APP_NAME },
 			{
 				name: "description",
-				content: "一份只写给你的生日礼物。"
+				content: "一份只属于你们的恋爱数字档案。"
 			},
 			{
 				name: "theme-color",
@@ -363,7 +363,7 @@ var Route$1 = createRootRoute({
 		] })]
 	})
 });
-var $$splitComponentImporter = () => import("./routes-DhtfhGdv.mjs");
+var $$splitComponentImporter = () => import("./routes-BaFzGX0Y.mjs");
 var rootRouteChildren = { IndexRoute: createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter, "component") }).update({
 	id: "/",
 	path: "/",
@@ -377,4 +377,4 @@ function getRouter() {
 	});
 }
 //#endregion
-export { getRouter, router_BeKkEJf8_exports as t };
+export { getRouter, router_DxaYxpo8_exports as t };
