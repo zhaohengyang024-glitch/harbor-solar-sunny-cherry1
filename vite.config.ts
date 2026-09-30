@@ -151,6 +151,9 @@ export default defineConfig(({ command, isPreview }) => ({
     port: 8080,
     strictPort: true,
   },
+  ssr: {
+    noExternal: [/^@radix-ui\//, "tslib"],
+  },
   preview: {
     host: "127.0.0.1",
     port: 8081,
