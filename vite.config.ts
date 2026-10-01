@@ -152,7 +152,7 @@ export default defineConfig(({ command, isPreview }) => ({
     strictPort: true,
   },
   ssr: {
-    noExternal: [/^@radix-ui\//, "tslib"],
+    noExternal: [/^@radix-ui\//, "tslib", "react-remove-scroll", "use-sidecar", "use-callback-ref", "react-remove-scroll-bar", "detect-node-es", "aria-hidden", "get-nonce"],
   },
   preview: {
     host: "127.0.0.1",
@@ -175,9 +175,7 @@ export default defineConfig(({ command, isPreview }) => ({
           nitro({
             preset: "vercel",
             serverDir: "./server",
-            externals: {
-              inline: [/^@radix-ui\//, "tslib"],
-            },
+            noExternals: [/^@radix-ui\//, "tslib", "react-remove-scroll", "use-sidecar", "use-callback-ref", "react-remove-scroll-bar", "detect-node-es", "aria-hidden", "get-nonce"],
           }),
         ]
       : []),
