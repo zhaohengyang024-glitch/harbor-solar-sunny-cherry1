@@ -185,6 +185,12 @@ export const useGift = create<GiftState>()(
     }),
     {
       name: "yuni-os-v1",
+      version: 2,
+      migrate: (persisted) => {
+        const p = (persisted ?? {}) as Partial<GiftState>;
+        const { config: _oldConfig, ...rest } = p;
+        return { ...rest, config: DEFAULT_CONFIG };
+      },
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as Partial<GiftState>;
         return {

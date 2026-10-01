@@ -5,7 +5,7 @@ import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs"
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { t as styleSingleton } from "../_libs/react-style-singleton.mjs";
 import { n as create, t as persist } from "../_libs/zustand.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BwUg-7_i.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BrOYiDXt.js
 var import_react = /* @__PURE__ */ __toESM$1(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = /* @__PURE__ */ __toESM$1(require_react_dom());
@@ -2776,13 +2776,13 @@ function DialogDescription({ className, ...props }) {
 	});
 }
 var DEFAULT_CONFIG = {
-	herName: "亲爱的",
+	herName: "璐璐宝贝",
 	hisName: "我",
-	birthdayLabel: "今天",
-	birthdayISO: "",
-	togetherSince: "2024-09-28",
-	secretQuestion: "",
-	secretAnswer: "",
+	birthdayLabel: "10月1日",
+	birthdayISO: "2003-10-01",
+	togetherSince: "2025-08-31",
+	secretQuestion: "我们在一起的日子（6 位数字）",
+	secretAnswer: "250831",
 	hiddenKeyword: "yuni",
 	letter: `{{her}}：
 
@@ -2815,7 +2815,7 @@ var MOMENTS = [
 		title: "一场没有预告的遇见",
 		when: "起初",
 		body: "后来我想，真正的遇见都很轻。没有配乐，没有刚好飘落的花瓣，只是某一天，世界的噪声忽然小了一点。",
-		image: "/images/flowers.jpg"
+		image: "/images/moments/moment-meet.jpg"
 	},
 	{
 		id: "walk",
@@ -2823,39 +2823,39 @@ var MOMENTS = [
 		title: "并排走的那段路",
 		when: "后来",
 		body: "谁走得快半步，谁又会回头等。这件事比任何誓言都更像喜欢。",
-		image: "/images/morning.jpg"
+		image: "/images/moments/moment-walk.jpg"
 	},
 	{
 		id: "rain",
 		kicker: "03",
-		title: "那场不算浪漫的雨",
+		title: "雨天，留在屋里",
 		when: "某日",
-		body: "伞不够大，裤脚湿了，谁都没有抱怨。雨停的时候，路边的灯还亮着。",
-		image: "/images/rain.jpg"
+		body: "雨在窗外落着，屋里只开着暖灯。谁也没提要出门，日子慢得刚刚好。",
+		image: "/images/moments/moment-rain.jpg"
 	},
 	{
 		id: "cook",
 		kicker: "04",
-		title: "一锅说不上名字的晚饭",
+		title: "一束说不上名字的花",
 		when: "平常",
-		body: "盐放多了也没有关系。厨房里的声音，比外面的世界更像家。",
-		image: "/images/kitchen.jpg"
+		body: "花的颜色很轻，抱在怀里却有一点分量。像你说喜欢的时候，声音不大，我却记了很久。",
+		image: "/images/moments/moment-flowers.jpg"
 	},
 	{
 		id: "trip",
 		kicker: "05",
-		title: "窗口外面一直在动",
-		when: "一次出发",
-		body: "车票还在口袋里皱着。重要的不是去了哪里，是你可以在移动的风景旁边，安心地发呆。",
-		image: "/images/train.jpg"
+		title: "去看一场演唱会",
+		when: "2026.09.26 · 上海",
+		body: "场馆很大，灯很亮，我们坐在人海里的一小块地方。歌词一句句响起来的时候，我悄悄看了一眼你。",
+		image: "/images/moments/moment-concert.jpg"
 	},
 	{
 		id: "night",
 		kicker: "06",
-		title: "窗台那支花",
+		title: "散场之后的夜",
 		when: "夜里",
-		body: "城市在玻璃外面自己亮着。房间里只剩下水和花茎，还有一种愿意把夜晚分给对方的安静。",
-		image: "/images/window.jpg"
+		body: "应援棒还攥在手里，照片还热着。夜风把城市吹得很亮，我们慢慢走回去。",
+		image: "/images/moments/moment-night.jpg"
 	},
 	{
 		id: "today",
@@ -2863,7 +2863,7 @@ var MOMENTS = [
 		title: "到今天",
 		when: "此刻",
 		body: "海会退下去，天会暗下来。我仍想把这一天郑重地交给你。",
-		image: "/images/dusk.jpg"
+		image: "/images/moments/moment-today.jpg"
 	}
 ];
 var REASONS = [
@@ -3238,6 +3238,14 @@ var useGift = create()(persist((set, get) => ({
 	})
 }), {
 	name: "yuni-os-v1",
+	version: 2,
+	migrate: (persisted) => {
+		const { config: _oldConfig, ...rest } = persisted ?? {};
+		return {
+			...rest,
+			config: DEFAULT_CONFIG
+		};
+	},
 	merge: (persisted, current) => {
 		const p = persisted ?? {};
 		return {
